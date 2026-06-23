@@ -162,3 +162,18 @@ Query params for `GET /api/puzzles`:
 - ✅ Toast notifications (slide-in/out animations)
 - ✅ Low stock warning indicator (stock < 5 units — yellow banner + table highlights)
 - ✅ Sales analytics chart (bar chart of orders by status via Recharts)
+
+## Login Page
+
+![Login Page](./Screenshots/login.png)
+
+## Dashboard
+
+![Dashboard](./Screenshots/dashboard.png)
+
+## Inventory Page
+
+![Inventory](./Screenshots/inventory.png)
+
+## Order.png
+![Order](./Screenshots/Order.png)
