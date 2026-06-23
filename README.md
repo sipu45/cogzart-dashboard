@@ -169,11 +169,11 @@ Query params for `GET /api/puzzles`:
 
 ## Dashboard
 
-![Dashboard](./Screenshots/dashboard.png)
+![Dashboard](./Screenshots/Dashboard.png)
 
 ## Inventory Page
 
-![Inventory](./Screenshots/inventory.png)
+![Inventory](./Screenshots/Inventory.png)
 
 ## Order.png
 ![Order](./Screenshots/Order.png)
