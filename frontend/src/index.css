@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-500 hover:bg-brand-600 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 px-4 py-2 rounded-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-300;
+  }
+  .btn-danger {
+    @apply bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+  }
+  .input-field {
+    @apply w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition;
+  }
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100;
+  }
+  .badge-easy {
+    @apply bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-0.5 rounded-full;
+  }
+  .badge-medium {
+    @apply bg-yellow-100 text-yellow-700 text-xs font-semibold px-2.5 py-0.5 rounded-full;
+  }
+  .badge-hard {
+    @apply bg-red-100 text-red-700 text-xs font-semibold px-2.5 py-0.5 rounded-full;
+  }
+  .badge-pending {
+    @apply bg-yellow-100 text-yellow-700 text-xs font-semibold px-2.5 py-0.5 rounded-full;
+  }
+  .badge-shipped {
+    @apply bg-blue-100 text-blue-700 text-xs font-semibold px-2.5 py-0.5 rounded-full;
+  }
+  .badge-delivered {
+    @apply bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-0.5 rounded-full;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { @apply bg-gray-100; }
+::-webkit-scrollbar-thumb { @apply bg-gray-300 rounded-full; }
+::-webkit-scrollbar-thumb:hover { @apply bg-gray-400; }
+
+/* Toast animations */
+@keyframes slide-in {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slide-out {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(100%); opacity: 0; }
+}
+.toast-enter { animation: slide-in 0.3s ease-out; }
+.toast-exit { animation: slide-out 0.3s ease-in; }
