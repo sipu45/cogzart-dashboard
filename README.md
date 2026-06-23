@@ -64,7 +64,7 @@ cogzart/
 
 ### Prerequisites
 - Node.js v18+
-- MongoDB (local or Atlas)
+- MongoD
 - Git
 
 ---
@@ -155,31 +155,7 @@ Query params for `GET /api/puzzles`:
 - `difficulty` — Filter by difficulty (easy / medium / hard)
 - `inStock` — Filter by availability (true / false)
 
----
 
-## ☁️ Deployment Guide
-
-### Backend — Railway / Render
-
-1. Push code to GitHub
-2. Create new project on [Railway](https://railway.app) or [Render](https://render.com)
-3. Connect your GitHub repo
-4. Set root directory to `backend`
-5. Add environment variables:
-   - `MONGO_URI` — your MongoDB Atlas connection string
-   - `JWT_SECRET` — a strong secret key
-   - `NODE_ENV=production`
-6. Deploy
-
-### Frontend — Vercel / Netlify
-
-1. Update `vite.config.js` to point proxy to your deployed backend URL (or use an `.env` file with `VITE_API_URL`)
-2. Push to GitHub
-3. Import project on [Vercel](https://vercel.com)
-4. Set root directory to `frontend`
-5. Deploy
-
----
 
 ## 📊 Bonus Features Implemented
 
