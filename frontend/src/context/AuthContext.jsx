@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(() => localStorage.getItem("cogzart_token"));
 
   const login = useCallback(async (email, password) => {
-    const { data } = await api.post("/auth/login", { email, password });
+    const { data } = await api.post("https://cogzart-backend.onrender.com//auth/login", { email, password });
     localStorage.setItem("cogzart_token", data.token);
     localStorage.setItem("cogzart_user", JSON.stringify(data.user));
     setToken(data.token);
