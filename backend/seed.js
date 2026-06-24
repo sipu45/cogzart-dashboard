@@ -1,3 +1,5 @@
+require("dns").setServers(["8.8.8.8", "1.1.1.1"]); 
+
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const Puzzle = require("./models/Puzzle");
@@ -92,7 +94,6 @@ const seedDB = async () => {
     const createdPuzzles = await Puzzle.insertMany(samplePuzzles);
     console.log(`Inserted ${createdPuzzles.length} puzzles`);
 
-    // Create sample orders
     const sampleOrders = [
       {
         customerName: "Ramesh Kumar",
@@ -133,7 +134,5 @@ const seedDB = async () => {
     process.exit(1);
   }
 };
-
-
 
 seedDB();
